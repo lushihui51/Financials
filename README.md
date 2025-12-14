@@ -1,2 +1,2 @@
 # Financials
-Handy tools to track your financials
+Handy tools to track your financials.
