@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS PrimaryCategory;
 DROP TYPE IF EXISTS Individual;
 
 CREATE TYPE Individual AS ENUM ('Jaden', 'Jiwon', 'Other');
+
 CREATE TABLE PrimaryCategory (
     primaryCategoryName TEXT PRIMARY KEY
 );
@@ -29,16 +30,13 @@ CREATE TABLE Spending (
         ON DELETE RESTRICT
         ON UPDATE CASCADE,
     storeName TEXT NOT NULL,
-    storeLocation TEXT NOT NULL,
-    FOREIGN KEY (storeName, storeLocation) REFERENCES Store(storeName, storeLocation)
-        ON DELETE RESTRICT
-        ON UPDATE CASCADE
+    storeLocation TEXT NOT NULL
 );
 
 CREATE TABLE SpendingSecondaryCategory (
     spendingId INTEGER,
     secondaryCategoryName TEXT,
-    FOREIGN KEY (spendingId) REFERENCES spending(spendingId)
+    FOREIGN KEY (spendingId) REFERENCES Spending(spendingId)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
     FOREIGN KEY (secondaryCategoryName) REFERENCES SecondaryCategory(secondaryCategoryName)
