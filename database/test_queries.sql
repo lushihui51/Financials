@@ -1,6 +1,6 @@
 -- get_total_costs
 SELECT SUM(cost) AS total_cost
-FROM Spending
+FROM Spending;
 -- WHERE date BETWEEN '2025-10-13' AND '2025-11-13';
 
 -- get_total_costs_by_category
