@@ -46,7 +46,7 @@ FROM Spending
 WHERE ARRAY(SELECT UNNEST(spenders) ORDER BY 1) != ARRAY(SELECT UNNEST(beneficiaries) ORDER BY 1)
     AND freebie = false AND settled = false;
 
--- get_total_owing_by_person
+-- get_total_owed_by_person
 SELECT giver, taker, SUM(cost / array_length(beneficiaries, 1) / array_length(spenders, 1)) AS owed
 FROM Spending
     CROSS JOIN LATERAL UNNEST(spenders) as giver
