@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean, Date, ARRAY, func, ForeignKey
+from sqlalchemy import Column, Integer, String, Numeric, Boolean, Date, ARRAY, func, ForeignKey
 from db_config import Base
 
 class PrimaryCategory(Base):
@@ -12,7 +12,7 @@ class Spending(Base):
     id = Column(Integer, primary_key=True)
     description = Column(String, nullable=False)
     aggregated = Column(Boolean, nullable=False)
-    cost = Column(Integer, nullable=False)
+    cost = Column(Numeric(10, 2), nullable=False)
     date = Column(Date, nullable=False, default=func.current_date())
     essential = Column(Boolean, nullable=False)
     spenders = Column(ARRAY(String), nullable=False)
