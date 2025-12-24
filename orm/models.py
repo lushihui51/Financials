@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Boolean, Date, ARRAY, func, ForeignKey
-from orm.db_config import Base
+from db_config import Base
 
 class PrimaryCategory(Base):
     __tablename__ = 'primarycategory'
