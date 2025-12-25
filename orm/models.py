@@ -1,5 +1,7 @@
-from sqlalchemy import Column, Integer, String, Numeric, Boolean, Date, ARRAY, func, ForeignKey
+from sqlalchemy import Column, Integer, String, Numeric, Boolean, Date, ARRAY, func, ForeignKey, Enum
 from db_config import Base
+
+Individual = Enum('Jaden', 'Jiwon', 'Other', name='individual', create_type=False)
 
 class PrimaryCategory(Base):
     __tablename__ = 'primarycategory'
@@ -15,8 +17,8 @@ class Spending(Base):
     cost = Column(Numeric(10, 2), nullable=False)
     date = Column(Date, nullable=False, default=func.current_date())
     essential = Column(Boolean, nullable=False)
-    spenders = Column(ARRAY(String), nullable=False)
-    beneficiaries = Column(ARRAY(String), nullable=False)
+    spenders = Column(ARRAY(Individual), nullable=False)
+    beneficiaries = Column(ARRAY(Individual), nullable=False)
     freebie = Column(Boolean, nullable=False)
     settled = Column(Boolean, nullable=False, default=False)
     primaryCategoryName = Column(String, ForeignKey('primarycategory.primarycategoryname', onupdate='CASCADE', ondelete='RESTRICT'), nullable=False)
