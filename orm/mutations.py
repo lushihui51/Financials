@@ -6,8 +6,8 @@ from models import Spending
 
 def create_spending(description: str, cost: Decimal, date: date, 
                     essential: bool, spenders: List[str], beneficiaries: List[str], 
-                    primaryCategoryName: str, storeName: str, 
-                    storeLocation: str, freebie: bool, settled: bool=False, aggregated: bool=True) -> int:
+                    primary_category_name: str, store_name: str, 
+                    store_location: str, freebie: bool, settled: bool=False, aggregated: bool=True) -> int:
     with Session() as session:
         spending = Spending(
             description=description,
@@ -19,10 +19,10 @@ def create_spending(description: str, cost: Decimal, date: date,
             beneficiaries=beneficiaries,
             freebie=freebie,
             settled=settled,
-            primaryCategoryName=primaryCategoryName,
-            storeName=storeName,
-            storeLocation=storeLocation
+            primary_category_name=primary_category_name,
+            store_name=store_name,
+            store_location=store_location
         )
         session.add(spending)
         session.commit()
-        return spending.id
+        # return spending.spending_id
