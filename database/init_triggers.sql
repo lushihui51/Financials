@@ -10,6 +10,6 @@ $$ LANGUAGE plpgsql;
 
 CREATE TRIGGER sort_spenders_and_beneficiaries_before_insert_trigger
 BEFORE INSERT 
-ON Spending
+ON spending
 FOR EACH ROW
 EXECUTE FUNCTION sort_spenders_and_beneficiaries_before_insert_function();
