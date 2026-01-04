@@ -30,26 +30,24 @@ FROM spending
 WHERE essential = false;
 
 -- get_all_freebie_spendings
-SELECT description, spenders as giver, beneficiaries as taker
-FROM spending
-WHERE freebie = true;
+SELECT STRING_AGG(DISTINCT si.individual_name, ', ') AS spender, STRING_AGG(DISTINCT bi.individual_name, ', ') AS beneficiary, s.cost AS freebie_amount, s.description AS description
+FROM spenders_individual si
+JOIN beneficiaries_individual bi ON si.spending_id = bi.spending_id
+JOIN spending s ON s.spending_id = si.spending_id
+WHERE s.freebie = true
+GROUP BY s.spending_id;
 
 -- get_all_unsettled_spendings
-SELECT description, cost, spenders as givers, beneficiaries as takers
-FROM spending
-WHERE ARRAY(SELECT UNNEST(spenders) ORDER BY 1) != ARRAY(SELECT UNNEST(beneficiaries) ORDER BY 1)
-    AND freebie = false AND settled = false;
+SELECT STRING_AGG(DISTINCT si.individual_name, ', ') AS spender, STRING_AGG(DISTINCT bi.individual_name, ', ') AS beneficiary, s.cost AS unsettled_amount, s.description AS description, s.spending_id AS spending_id
+FROM spending s 
+JOIN spenders_individual si  ON s.spending_id = si.spending_id
+JOIN beneficiaries_individual bi  ON si.spending_id = bi.spending_id
+WHERE settled = false
+GROUP BY s.spending_id;
 
 -- get_total_unsettled_costs
-SELECT SUM(cost) as total_unsettled_cost
+SELECT SUM(cost) AS total_unsettled_cost
 FROM spending
-WHERE ARRAY(SELECT UNNEST(spenders) ORDER BY 1) != ARRAY(SELECT UNNEST(beneficiaries) ORDER BY 1)
-    AND freebie = false AND settled = false;
+WHERE settled = false;
 
--- get_total_owed_by_person
-SELECT giver, taker, SUM(cost / array_length(beneficiaries, 1) / array_length(spenders, 1)) AS owed
-FROM spending
-    CROSS JOIN LATERAL UNNEST(spenders) as giver
-    CROSS JOIN LATERAL UNNEST(beneficiaries) as taker
-WHERE freebie = false AND settled = false AND NOT (taker = ANY(spenders))
-GROUP BY taker, giver;
+-- get_total_owed_by_person: this needs to be in backend logic 
