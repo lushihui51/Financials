@@ -38,7 +38,7 @@ WHERE s.freebie = true
 GROUP BY s.spending_id;
 
 -- get_all_unsettled_spendings
-SELECT STRING_AGG(DISTINCT si.individual_name, ', ') AS spender, STRING_AGG(DISTINCT bi.individual_name, ', ') AS beneficiary, s.cost AS unsettled_amount, s.description AS description
+SELECT STRING_AGG(DISTINCT si.individual_name, ', ') AS spender, STRING_AGG(DISTINCT bi.individual_name, ', ') AS beneficiary, s.cost AS unsettled_amount, s.description AS description, s.spending_id AS spending_id
 FROM spending s 
 JOIN spenders_individual si  ON s.spending_id = si.spending_id
 JOIN beneficiaries_individual bi  ON si.spending_id = bi.spending_id
