@@ -1,4 +1,5 @@
 -- sort_spenders_and_beneficiaries_before_insert_trigger + function
+/*
 CREATE OR REPLACE FUNCTION sort_spenders_and_beneficiaries_before_insert_function()
 RETURNS TRIGGER AS $$
 BEGIN
@@ -13,3 +14,4 @@ BEFORE INSERT
 ON spending
 FOR EACH ROW
 EXECUTE FUNCTION sort_spenders_and_beneficiaries_before_insert_function();
+*/
