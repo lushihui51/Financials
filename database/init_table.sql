@@ -24,7 +24,7 @@ CREATE TABLE spending (
     description VARCHAR(255) NOT NULL,
     aggregated BOOLEAN NOT NULL,
     cost DECIMAL(10, 2) NOT NULL,
-    date DATE NOT NULL DEFAULT CURRENT_DATE,
+    spending_date DATE NOT NULL DEFAULT CURRENT_DATE,
     essential BOOLEAN NOT NULL,
     freebie BOOLEAN NOT NULL,
     settled BOOLEAN NOT NULL DEFAULT false,

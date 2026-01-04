@@ -71,7 +71,7 @@ INSERT INTO individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'COSTCO WHOLESALE',
         true,
@@ -101,7 +101,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'OPENAI *CHATGPT SUBSCR',
         false,
@@ -131,7 +131,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'VALUE MOBILE',
         true,
@@ -161,7 +161,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'COMPASS ACCOUNT BURNAB',
         true,
@@ -191,7 +191,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'COMPASS ACCOUNT BURNAB',
         true,
@@ -221,7 +221,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'NETFLIX.COM',
         true,
@@ -272,7 +272,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'BIG WAY HOT POT LOUGHE',
         false,
@@ -309,7 +309,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'SAVE ON FOODS',
         true,
@@ -353,7 +353,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'MMC WINES AND SPIRITS',
         true,
@@ -383,7 +383,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'ARSICAULT MCALLIST',
         true,
@@ -420,7 +420,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'CLIPPER TRANSIT',
         false,
@@ -450,7 +450,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'IT''S SUGAR JEFFERSON',
         true,
@@ -487,7 +487,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'IT''S SUGAR JEFFERSON',
         true,
@@ -524,7 +524,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'IN-N-OUTFISHERMANSWHAR',
         true,
@@ -561,7 +561,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'SAFE HARBOR',
         false,
@@ -591,7 +591,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'CLIPPER TRANSIT',
         false,
@@ -621,7 +621,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'CLIPPER TRANSIT',
         false,
@@ -651,7 +651,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'JOY''S PLACE',
         false,
@@ -681,7 +681,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'SKYSTAR WHEEL',
         false,
@@ -718,7 +718,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'SOTTO MARE OYSTERIA',
         true,
@@ -755,7 +755,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         '16TH & DOLORES',
         true,
@@ -792,7 +792,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'SFO The Plant',
         true,
@@ -822,7 +822,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'COSTCO WHOLESALE',
         true,
@@ -866,7 +866,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'COSTCO WHOLESALE',
         true,
@@ -910,7 +910,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'HANNAM LANGLEY',
         true,
@@ -954,7 +954,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'SAVE ON FOODS',
         true,
@@ -998,7 +998,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'PET VALU CANADA INC.',
         true,
@@ -1028,7 +1028,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'AIR CAN* 00142311952791',
         false,
@@ -1058,7 +1058,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'AIR CAN* 00144296570408',
         false,
@@ -1088,7 +1088,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'MATTUS COFFEE',
         false,
@@ -1118,7 +1118,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'SQ *OAKBERRY ACAI BOWL',
         false,
@@ -1148,7 +1148,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'T&T SUPERMARKET',
         true,
@@ -1192,7 +1192,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'PET VALU CANADA INC.',
         true,
@@ -1222,7 +1222,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'HELLOFRESH',
         false,
@@ -1252,7 +1252,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'SQ \*GOLDIE''S DONUTS &',
         true,
@@ -1296,7 +1296,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'HANNAM LANGLEY',
         true,
@@ -1340,7 +1340,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         '0826_YVR_Sweet_Maple_M',
         true,
@@ -1377,7 +1377,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'AIR CAN* 00144287016801',
         false,
@@ -1414,7 +1414,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'PET VALU',
         true,
@@ -1444,7 +1444,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'DOLLARAMA',
         true,
@@ -1474,7 +1474,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'HEYTEA',
         true,
@@ -1511,7 +1511,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'APPLE STORE',
         false,
@@ -1548,7 +1548,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'COSTCO WHOLESALE',
         true,
@@ -1585,7 +1585,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'COURSERA.ORG',
         false,
@@ -1615,7 +1615,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'WAL-MART',
         true,
@@ -1652,7 +1652,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'RECREATION AT U OF T',
         false,
@@ -1689,7 +1689,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'CHIPOTLE',
         true,
@@ -1726,7 +1726,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'JAPADOG',
         true,
@@ -1763,7 +1763,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'GALLERIA FRESH EXPRESS',
         true,
@@ -1800,7 +1800,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'CLIPPER TRANSIT',
         false,
@@ -1830,7 +1830,7 @@ INSERT INTO beneficiaries_individual (
 );
 
 INSERT INTO spending (
-    description, aggregated, cost, date, essential, freebie, settled, primary_category_name, store_name, store_location
+    description, aggregated, cost, spending_date, essential, freebie, settled, primary_category_name, store_name, store_location
     ) VALUES (
         'SHACK SQAURE ONE',
         true,
