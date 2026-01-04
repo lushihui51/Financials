@@ -24,10 +24,10 @@ CREATE TABLE spending (
     description VARCHAR(255) NOT NULL,
     aggregated BOOLEAN NOT NULL,
     cost DECIMAL(10, 2) NOT NULL,
-    spending_date DATE NOT NULL DEFAULT CURRENT_DATE,
+    spending_date DATE NOT NULL,
     essential BOOLEAN NOT NULL,
     freebie BOOLEAN NOT NULL,
-    settled BOOLEAN NOT NULL DEFAULT false,
+    settled BOOLEAN NOT NULL,
     primary_category_name VARCHAR(50) NOT NULL,
     FOREIGN KEY (primary_category_name) REFERENCES primary_category(primary_category_name)
         ON DELETE RESTRICT
@@ -44,7 +44,7 @@ CREATE TABLE spenders_individual (
         ON DELETE CASCADE
         ON UPDATE CASCADE,
     FOREIGN KEY (individual_name) REFERENCES individual(individual_name)
-        ON DELETE CASCADE
+        ON DELETE RESTRICT
         ON UPDATE CASCADE,
     PRIMARY KEY (spending_id, individual_name)
 );
@@ -56,7 +56,7 @@ CREATE TABLE beneficiaries_individual (
         ON DELETE CASCADE
         ON UPDATE CASCADE,
     FOREIGN KEY (individual_name) REFERENCES individual(individual_name)
-        ON DELETE CASCADE
+        ON DELETE RESTRICT
         ON UPDATE CASCADE,
     PRIMARY KEY (spending_id, individual_name)
 );
@@ -80,7 +80,7 @@ CREATE TABLE spending_secondary_category (
         ON DELETE CASCADE
         ON UPDATE CASCADE,
     FOREIGN KEY (secondary_category_name) REFERENCES secondary_category(secondary_category_name)
-        ON DELETE CASCADE
+        ON DELETE RESTRICT
         ON UPDATE CASCADE,
     PRIMARY KEY (spending_id, secondary_category_name)
 );
