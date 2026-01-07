@@ -7,9 +7,11 @@ from sqlalchemy import String
 from sqlalchemy import Numeric
 from sqlalchemy import Date
 from sqlalchemy import Enum
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
+from sqlalchemy.orm import validates
 from sqlalchemy.orm import relationship
 
 individual = Enum('Jaden', 'Jiwon', 'Other', name='individual', create_type=False)
@@ -60,7 +62,18 @@ class Spending(Base):
 
     def __repr__(self):
         return super().__repr__()
-
+    
+    @validates('cost')
+    def validate_cost(self, key, value):
+        if isinstance(value, str):
+            return Decimal(value)
+        return value
+    
+    @validates('date')
+    def validate_date(self, key, value):
+        if isinstance(value, str):
+            return date.fromisoformat(value)
+        return value
 
 class SpendersIndividual(Base):
     __tablename__ = "spenders_individual"
@@ -88,6 +101,8 @@ class SplitArrangement(Base):
 
     individual_a: Mapped[str] = mapped_column(ForeignKey("individual.individual_name", ondelete="CASCADE", onupdate="CASCADE"), primary_key=True)
     individual_b: Mapped[str] = mapped_column(ForeignKey("individual.individual_name", ondelete="CASCADE", onupdate="CASCADE"), primary_key=True)
+    a_proportion: Mapped[Decimal] = mapped_column(Numeric(10, 2))
+    categories: Mapped[dict] = mapped_column(JSONB)
 
     def __repr__(self):
         return super().__repr__()
