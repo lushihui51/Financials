@@ -64,6 +64,7 @@ CREATE TABLE beneficiaries_individual (
 CREATE TABLE split_arrangement (
     individual_a VARCHAR(50),
     individual_b VARCHAR(50),
+    a_proportion DECIMAL(10, 2),
     FOREIGN KEY (individual_a) REFERENCES individual(individual_name)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
