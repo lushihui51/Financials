@@ -39,7 +39,7 @@ CREATE TABLE spending (
 CREATE TABLE spenders_individual (
     spending_id INTEGER,
     individual_name VARCHAR(50),
-    contribution DECIMAL(10, 2),
+    contribution DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (spending_id) REFERENCES spending(spending_id)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
@@ -64,7 +64,8 @@ CREATE TABLE beneficiaries_individual (
 CREATE TABLE split_arrangement (
     individual_a VARCHAR(50),
     individual_b VARCHAR(50),
-    a_proportion DECIMAL(10, 2),
+    a_proportion DECIMAL(10, 2) NOT NULL,
+    categories JSONB NOT NULL,
     FOREIGN KEY (individual_a) REFERENCES individual(individual_name)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
