@@ -1,2 +1,2 @@
 # Financials
-Handy tools to track your financials.
+Track expenses, split costs, and settle debts.
