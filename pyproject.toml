@@ -1,0 +1,30 @@
+[project]
+name = "tally"
+version = "0.1.0"
+description = "AI-powered spending tracker and cost settler application."
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic",
+    "fastapi",
+    "psycopg2-binary",
+    "pydantic",
+    "pydantic-settings",
+    "python-dotenv",
+    "python-multipart",
+    "sqlalchemy",
+    "uvicorn",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio", "httpx"]
+
+[build-system]
+requires = ["setuptools>=80.1"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["sql/*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

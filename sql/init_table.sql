@@ -26,7 +26,6 @@ CREATE TABLE spending (
     cost DECIMAL(10, 2) NOT NULL,
     spending_date DATE NOT NULL,
     essential BOOLEAN NOT NULL,
-    freebie BOOLEAN NOT NULL,
     settled BOOLEAN NOT NULL,
     primary_category_name VARCHAR(50) NOT NULL,
     FOREIGN KEY (primary_category_name) REFERENCES primary_category(primary_category_name)

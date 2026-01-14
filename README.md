@@ -1,2 +1,2 @@
 # Financials
-Track expenses, split costs, and settle debts.
+AI-powered spending tracker and cost settler application.
