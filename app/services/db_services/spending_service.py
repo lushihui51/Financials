@@ -28,5 +28,4 @@ def insert_spendings(
     db.add_all(spendings)
     db.flush()
     spending_ids = [spending.spending_id for spending in spendings]
-    db.commit()
     return spending_ids

@@ -24,6 +24,7 @@ class TestSpendingInsert:
                 ],
                 db_prefill,
             )
+            db_prefill.commit()
 
         spending_result_schemas = []
 
@@ -65,6 +66,8 @@ class TestSpendingInsert:
                 ],
                 db_prefill,
             )
+            db_prefill.commit()
+
         spending_insert_schemas = [
             SpendingInsertSchema(**spending) for spending in spendings
         ]
@@ -76,6 +79,7 @@ class TestSpendingInsert:
             ):
                 spending["spending_id"] = spending_id
                 spending_result_schemas.append(SpendingResultSchema(**spending))
+            db_insert.commit()
 
         with db_factory() as db_select:
             for spending_result_schema in spending_result_schemas:

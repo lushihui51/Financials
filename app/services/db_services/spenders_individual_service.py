@@ -12,4 +12,3 @@ def insert_spenders_individuals(
         for data in spenders_individuals_data
     ]
     db.add_all(spenders_individuals)
-    db.commit()

@@ -15,5 +15,4 @@ def insert_beneficiaries_individuals(
         for data in beneficiaries_individuals_data
     ]
     db.add_all(beneficiaries_individuals)
-    db.commit()
     return beneficiaries_individuals

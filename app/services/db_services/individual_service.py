@@ -9,5 +9,4 @@ def insert_individuals(
 ) -> list[IndividualModel]:
     individuals = [IndividualModel(**data.model_dump()) for data in individuals_data]
     db.add_all(individuals)
-    db.commit()
     return individuals

@@ -46,6 +46,7 @@ class TestSecondaryCategoryInsert:
                 ],
                 db_insert,
             )
+            db_insert.commit()
 
         with db_factory() as db_select:
             stmt = select(SecondaryCategoryModel)

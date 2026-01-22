@@ -11,4 +11,3 @@ def insert_primary_categories(
         PrimaryCategoryModel(**data.model_dump()) for data in primary_categories_data
     ]
     db.add_all(primary_categories)
-    db.commit()

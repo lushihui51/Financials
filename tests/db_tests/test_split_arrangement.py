@@ -37,6 +37,7 @@ class TestSplitArrangementInsert:
                 ],
                 db_prefill,
             )
+            db_prefill.commit()
 
         split_arrangements = json_to_dict(td_split_arrangement_json)
         split_arrangement_insert_schemas = []
@@ -88,6 +89,7 @@ class TestSplitArrangementInsert:
                 ],
                 db_prefill,
             )
+            db_prefill.commit()
 
         split_arrangements = json_to_dict(td_split_arrangement_json)
         split_arrangement_insert_schemas = [
@@ -100,6 +102,7 @@ class TestSplitArrangementInsert:
                 split_arrangement_insert_schemas,
                 db_insert,
             )
+            db_insert.commit()
 
         with db_factory() as db_select:
             for split_arrangement_insert_schema in split_arrangement_insert_schemas:

@@ -36,6 +36,7 @@ class TestIndividualInsert:
                 [IndividualInsertSchema(**individual) for individual in individuals],
                 db_insert,
             )
+            db_insert.commit()
 
         with db_factory() as db_select:
             stmt = select(IndividualModel)

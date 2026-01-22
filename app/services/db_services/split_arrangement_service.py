@@ -11,4 +11,3 @@ def insert_split_arrangements(
         SplitArrangementModel(**data.model_dump()) for data in split_arrangements_data
     ]
     db.add_all(split_arrangements)
-    db.commit()

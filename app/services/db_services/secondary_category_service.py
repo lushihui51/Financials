@@ -12,4 +12,3 @@ def insert_secondary_categories(
         for data in secondary_categories_data
     ]
     db.add_all(secondary_categories)
-    db.commit()

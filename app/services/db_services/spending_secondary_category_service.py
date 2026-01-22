@@ -15,4 +15,3 @@ def insert_spending_secondary_categories(
         for data in spending_secondary_categories_data
     ]
     db.add_all(spending_secondary_categories)
-    db.commit()
