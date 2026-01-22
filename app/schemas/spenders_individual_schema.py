@@ -1,14 +1,21 @@
 from decimal import Decimal
-from pydantic import BaseModel
+
+from app.schemas.base_schema import BaseSchema
 
 
-class SpendersIndividualInsert(BaseModel):
+class SpendersIndividualInsertSchema(BaseSchema):
     spending_id: int
     individual_name: str
     contribution: Decimal
 
 
-class SpendersIndividualSelect(BaseModel):
+class SpendersIndividualSelectSchema(BaseSchema):
     spending_id: int | None = None
     individual_name: str | None = None
     contribution: Decimal | None = None
+
+
+class SpendersIndividualResultSchema(BaseSchema):
+    spending_id: int
+    individual_name: str
+    contribution: Decimal

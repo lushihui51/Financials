@@ -1,11 +1,16 @@
-from pydantic import BaseModel
+from app.schemas.base_schema import BaseSchema
 
 
-class BeneficiariesIndividualInsert(BaseModel):
+class BeneficiariesIndividualInsertSchema(BaseSchema):
     spending_id: int
     individual_name: str
 
 
-class BeneficiariesIndividualSelect(BaseModel):
+class BeneficiariesIndividualSelectSchema(BaseSchema):
     spending_id: int | None = None
     individual_name: str | None = None
+
+
+class BeneficiariesIndividualResultSchema(BaseSchema):
+    spending_id: int
+    individual_name: str

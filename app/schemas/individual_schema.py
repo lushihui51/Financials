@@ -1,9 +1,13 @@
-from pydantic import BaseModel
+from app.schemas.base_schema import BaseSchema
 
 
-class IndividualInsert(BaseModel):
+class IndividualInsertSchema(BaseSchema):
     individual_name: str
 
 
-class IndividualSelect(BaseModel):
+class IndividualSelectSchema(BaseSchema):
     individual_name: str | None = None
+
+
+class IndividualResultSchema(BaseSchema):
+    individual_name: str

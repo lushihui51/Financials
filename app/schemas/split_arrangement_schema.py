@@ -1,14 +1,16 @@
 from __future__ import annotations
+
 from decimal import Decimal
-from pydantic import BaseModel
+
+from app.schemas.base_schema import BaseSchema
 
 
-class BooleanExpASTOperands(BaseModel):
+class BooleanExpASTOperands(BaseSchema):
     primary_category_name: str | None = None
     secondary_category_name: str | None = None
 
 
-class BooleanExpAST(BaseModel):
+class BooleanExpAST(BaseSchema):
     AND: list[BooleanExpAST | BooleanExpASTOperands] | None = None
     OR: list[BooleanExpAST | BooleanExpASTOperands] | None = None
     NOT: BooleanExpAST | BooleanExpASTOperands | None = None
@@ -16,15 +18,22 @@ class BooleanExpAST(BaseModel):
     secondary_category_name: str | None = None
 
 
-class SplitArrangementInsert(BaseModel):
+class SplitArrangementInsert(BaseSchema):
     individual_a: str
     individual_b: str
     a_proportion: Decimal
     categories: BooleanExpAST
 
 
-class SplitArrangementSelect(BaseModel):
+class SplitArrangementSelect(BaseSchema):
     individual_a: str | None = None
     individual_b: str | None = None
     a_proportion: Decimal | None = None
     categories: BooleanExpAST | None = None
+
+
+class SplitArrangementResult(BaseSchema):
+    individual_a: str
+    individual_b: str
+    a_proportion: Decimal
+    categories: BooleanExpAST

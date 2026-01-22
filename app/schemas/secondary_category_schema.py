@@ -1,9 +1,13 @@
-from pydantic import BaseModel
+from app.schemas.base_schema import BaseSchema
 
 
-class SecondaryCategoryInsert(BaseModel):
-    secondary_category_name: str 
+class SecondaryCategoryInsertSchema(BaseSchema):
+    secondary_category_name: str
 
 
-class SecondaryCategorySelect(BaseModel):
+class SecondaryCategorySelectSchema(BaseSchema):
     secondary_category_name: str | None = None
+
+
+class SecondaryCategoryResultSchema(BaseSchema):
+    secondary_category_name: str
